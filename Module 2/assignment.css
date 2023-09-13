@@ -1,0 +1,63 @@
+* {
+    box-sizing:border-box;
+}
+
+
+.Row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.Column {
+    flex: 25%;
+}
+
+@media screen and (max-width: 1000px) {
+    .Column {
+      flex: 50%;
+    }
+  }
+
+@media screen and (max-width: 600px) {
+    .Column {
+      flex: 100%;
+    }
+  }
+
+body {
+    background-color: black;
+}
+
+header {
+    background-color: #666;
+    padding: 30px;
+    text-align: center;
+    font-size: 35px;
+    color: white;
+}
+
+header {
+    background-color: black;
+    animation-name: example;
+    animation-duration: 10s;
+}
+  
+@keyframes example {
+    0%   {background-color: rgb(255, 255, 255);}
+    25%  {background-color: rgb(144, 144, 144);}
+    50%  {background-color: rgb(90,90,90);}
+    100% {background-color: rgb(20,20,20);}
+} /* This is new*/
+
+h2 {
+    text-align: center;
+}
+
+ul.b {
+    list-style-type: square; /*This is new*/
+}
+
+footer {
+    background-color: white;
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<hmtl>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+
+<link rel="stylesheet" href="assignment.css">
+
+</head>
+<header>
+    <h2>Relax Salon</h2>
+</header>
+
+<body>
+
+<div class="Row">
+    <div class="Column" style="background-color:rgb(136, 81, 81);">
+        <h2>See all of our services!</h2>
+        <p><a href="https://www.doane.edu/" target="_blank">Our Services</a></p>
+    </div>
+
+    <div class="Column" style="background-color: #9b5050;">
+        <h2>We have hot stones available upon request &#128525</h2> <!--The emoji is a new thing-->
+        <p><img src="MyMedia/hotstone.jpg" alt="Hot stones" title="Hot Stones" style="width:50%;"></p>
+    </div>
+
+    <div class="Column" style="background-color: #7b4444;">
+        <h2>World class facials</h2>
+        <p><img src="MyMedia/facials.jpg" alt="Facials" title="facials" style="width:50%;"></p>
+    </div>
+
+    <div class="Column" style="background-color: #5d2f2f;">
+        <h2>Click the button to get your coordinates. Our corrdinates are 22.8948° N, 109.9152° W</h2>
+
+        <button onclick="getLocation()">Try It</button>
+
+        <p id="demo"></p>
+
+        <script>
+        var x = document.getElementById("demo");
+
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.watchPosition(showPosition);
+            } else { 
+                x.innerHTML = "Geolocation is not supported by this browser.";
+            }
+        }
+        function showPosition(position) {
+            x.innerHTML="Latitude: " + position.coords.latitude + 
+            "<br>Longitude: " + position.coords.longitude;
+        }
+        </script>
+    </div>
+</div>
+</body>
+<footer>
+    <ul class="b">
+        <li>Coffee</li>
+        <li>Hot Tea</li>
+        <li>Ice Tea</li>
+      </ul> <!--The list is a new thing-->
+</footer>

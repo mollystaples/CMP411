@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width-device-width, initial-scale-1.0">
+    <title>Survey</title>
+
+    <link rel="stylesheet" href="survey.css">
+</head>
+
+<h2>Survey About Dogs!</h2>
+
+<form>
+    <label for="fname">First and Last name:</label><br>
+    <input type="text" id="fname" name="fname" required><br>
+
+
+<p>Choose your favorite age of dogs:</p>
+
+    <input type="radio" id="puppy" name="fav_stage" value="PUPPY">
+    <label for="puppy">0-3 years</label><br>
+    <input type="radio" id="young" name="fav_stage" value="YOUNG">
+    <label for="young">4-7 years</label><br>
+    <input type="radio" id="old" name="fav_stage" value="OLD">
+    <label for="old">8+ years</label>
+
+
+<p>What are your favorite breeds?</p>
+
+    <input type="checkbox" id="breed1" name="breed1" value="Golden">
+    <label for="breed1">Golden Retriever</label><br>
+    <input type="checkbox" id="breed2" name="breed2" value="Doodles">
+    <label for="breed2">Any type of doodle</label><br>
+    <input type="checkbox" id="breed3" name="breed3" value="Labs">
+    <label for="breed3">Labs</label><br>
+    <input type="checkbox" id="breed4" name="breed4" value="Pitbulls">
+    <label for="breed4">Pitbulls</label><br>
+    <input type="checkbox" id="breed5" name="breed5" value="Australian Shepard">
+    <label for="breed5">Australian Shepard</label><br><br>
+
+
+
+    <label for="dogs">I have:</label>
+    <select id="dogs" names="dogs">
+        <option value="me">my own dog</option>
+        <option value="parents">no dogs but my parents do</option>
+        <option value="none">no dogs</option>
+    </select>
+
+
+<p>What are you innermost thoughts about dogs?</p>
+
+    <textarea name="message" rows="5" cols="50"></textarea><br>
+    <input type="submit" value="Submit">
+</form>
+
+</html>
