@@ -1,8 +1,8 @@
 function validateANDadd() {
     //* This is afunction where we validate that the user enters a word and then chooses either list 1 or 2
     var theNewWord = document.forms["myform"]["newWord"].value;
-    var theNewNumber=documentt.forms["myform"]["newNumber"].value;
-
+    var theNewNumber=document.forms["myform"]["newNumber"].value;
+    
     if (theNewWord == "") {
         alert("Please enter a word to check");
         return false;
@@ -14,13 +14,16 @@ function validateANDadd() {
         return false;
     }
     else {
+        
         //* This is where we add a row and the new word to either list 1 or 2
         if (theNewNumber==1){
             var tableRef = document.getElementById("mylist1");
-            (tableRef.insertRow(tableRef.rows.length)).innerhtml = theNewWord;}
+            (tableRef.insertRow(tableRef.rows.length)).innerHTML = theNewWord;
+           
+        }
         else{
             var tableRef = document.getElementById("mylist2");
-            (tableRef.insertRow(tableRef.rows.length)).innerhtml = theNewWord;}
+            (tableRef.insertRow(tableRef.rows.length)).innerHTML = theNewWord;}
         
         document.forms["myform"]["newWord"].value = "";
         document.forms["myform"]["newNumber"].value = "";

@@ -1,0 +1,23 @@
+* {
+    box-sizing: border-box;
+}
+
+.Row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.column {
+    flex: 15%;
+    padding: 20px;
+}
+
+@media screen and (max-width: 1000px) {
+    .Row {
+        flex-direction: column;
+    }
+}
+
+body {
+    background-color: rgb(150, 150, 255);
+}
