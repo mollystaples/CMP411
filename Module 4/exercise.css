@@ -1,0 +1,26 @@
+* {
+    box-sizing:border-box;
+}
+
+
+.Row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.column {
+    flex: 25%;
+}
+
+@media screen and (max-width: 1000px) {
+    .column {
+      flex: 50%;
+    }
+  }
+
+@media screen and (max-width: 600px) {
+    .column {
+      flex: 100%;
+    }
+  }
