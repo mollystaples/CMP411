@@ -42,8 +42,8 @@ async function getBaconIpsum() {
         document.getElementById("myFormattedData").innerHTML += "<p>" + jsonData[para] + "</p>";
     }
     
-    //return true;
-   
+    
+    //create an if statement for which algorithm to use
     if (newAlgorithm==1){
         document.getElementById("myEncryptedData").innerHTML= algorithm1(jsonData);
     }
@@ -54,14 +54,14 @@ async function getBaconIpsum() {
     return true;
 }
 function algorithm1(jsonData){
-    var newString= "";
+    var newString= ""; //make a variable newString that is empty
     
-    for (var para in jsonData) {
-        newString+= "<p>";
-        for(var char in jsonData[para]) {
-           var newChar= jsonData[para][char];
-            newChar = String.fromCharCode(newChar.charCodeAt(0)+1);
-            newString+= newChar;
+    for (var para in jsonData) { //for each paragraph
+        newString+= "<p>"; //this separates paragraphs
+        for(var char in jsonData[para]) { //for each character in each paragraph
+           var newChar= jsonData[para][char]; //newChar is the character of each paragraph ini the jsonData
+            newChar = String.fromCharCode(newChar.charCodeAt(0)+1); //putting the characters back together as a string and changing the ASCII value
+            newString+= newChar; //add each character to the string
 
         }
         newString+= "</p>";
@@ -71,14 +71,14 @@ function algorithm1(jsonData){
     }
        
 function algorithm2(jsonData){
-    var newString= "";
+    var newString= ""; //make a variable newString that is empty
         
-    for (var para in jsonData) {
-        newString+= "<p>";
-        for(var char in jsonData[para]) {
-            var newChar= jsonData[para][char];
-            newChar = String.fromCharCode(newChar.charCodeAt(0)-5);
-            newString+= newChar;
+    for (var para in jsonData) { //for each paragraph
+        newString+= "<p>"; //this separates paragraphs
+        for(var char in jsonData[para]) { //for each character in each paragraph
+            var newChar= jsonData[para][char]; //newChar is the character of each paragraph ini the jsonData
+            newChar = String.fromCharCode(newChar.charCodeAt(0)-5); //putting the characters back together as a string and changing the ASCII value
+            newString+= newChar; //add each character to the string
     
         }
         newString+= "</p>";
