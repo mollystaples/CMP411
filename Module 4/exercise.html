@@ -21,6 +21,21 @@
                 <option value=4>4</option>
                 <option value=5>5</option>
             </select><br /><br />
+            <label for="meatOrFiller">Just meat or meat and filler?</label>
+            <select id="meatOrFiller">
+                <option value="1">Just meat</option>
+                <option value="2">Meat and filler</option>
+            </select><br /><br />
+            <label for="newAlgorithm">Which algorithm do you want to use to encrypt?</label>
+            <select id="newAlgorithm">
+                <option value="1">1</option>
+                <option value="2">2</option>
+            </select><br /><br />
+            <label for="startWith">Do you want to start with Bacon Ipsum?</label>
+            <select id="startWith">
+                <option value="1">Yes</option>
+                <option value="2">No</option>
+            </select><br /><br />
             <input type="button" value="Get my Bacon Ipsum!" onclick="getBaconIpsum()">
         </div>
         <div class="column">
@@ -32,7 +47,12 @@
             <h2>Returned data as formatted paragraphs</h2>
             <p id="myFormattedData">
             </p>
-        </div>  
+        </div> 
+        <div class="column">
+            <h2>Returned data after encrypted</h2>
+            <p id="myEncryptedData">
+            </p>
+        </div> 
     </div>
 </body>
 </html> 

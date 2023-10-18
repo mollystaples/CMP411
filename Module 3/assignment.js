@@ -61,8 +61,6 @@ function Palindrome2(newWord) {
     let splitString = newWord.split("");
     splitString.reverse();
 
-
-
     for(let i = 0; i < newWord.length; i++) {
         if (splitString [i] != newWord [i]) {
             return false;

@@ -10,7 +10,7 @@
 
 
 .column {
-    flex: 25%;
+    flex: 20%;
 }
 
 @media screen and (max-width: 1000px) {
