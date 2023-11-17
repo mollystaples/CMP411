@@ -42,9 +42,11 @@ async function getStrings() {
 
     //stringify and print out the JSON object in the RawData section 
     document.getElementById("strings").innerHTML = JSON.stringify(jsonData.Strings);
+    for (var aString in jsonData.Strings) {
+        document.getElementById("strings").innerHTML += "<p>" + jsonData.Strings[aString] + "</p>";
+    }
     
 
-    
 
     return true;
 }
